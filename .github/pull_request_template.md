@@ -1,5 +1,7 @@
 ## Story
-Closes #<!-- GitHub issue number, not the OW id: OW-1 to OW-21 are #1 to #21, OW-22 is #23 -->
+Closes #__ <!-- when this PR finishes the story -->
+Part of #__ <!-- when the story needs more PRs; delete the line you don't use.
+Use the GitHub issue number, not the OW id: OW-1 to OW-21 are #1 to #21, OW-22 is #23 -->
 
 ## What changed
 <!-- 1 to 3 bullets: what a reviewer will see in the diff. -->
@@ -20,6 +22,8 @@ Label fixture output as "fixture". Never paste a token or a room ID. -->
 ## Definition of Done
 - [ ] GitHub Actions **test** check is green
 - [ ] One approving review with a real comment
+- [ ] After merge: the Jenkins build for the merge is green (tests in the JUnit report)
+- [ ] After merge: Webex received the deploy announcement
 - [ ] README or docs updated if users are affected
 - [ ] Squash-merge title keeps the story ID, e.g. `(OW-8)`
 
