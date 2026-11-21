@@ -13,8 +13,12 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements-dev.txt
-      - run: flake8 status_check.py ci tests
-      - run: pytest --junitxml=reports/junit.xml
+      # Lint every Python file that exists, so a PR isn't failed for files
+      # another teammate hasn't merged yet (.flake8 excludes .venv and reports).
+      - run: flake8 .
+      # pytest exit code 5 means "no tests collected" (before tests/ is merged).
+      # Any real test failure still exits 1 and fails the check.
+      - run: pytest --junitxml=reports/junit.xml || [ $? -eq 5 ]
       - uses: actions/upload-artifact@v4
         if: always()
         with:
