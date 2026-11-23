@@ -42,7 +42,7 @@ def summarize(data):
 
 def format_report(indicator, description, problems):
     """Return the text printed to the L1 shift."""
-    lines = [f"GitHub status: {description} (indicator: {indicator})"]
+    lines = [f"GitHub status: {description} (indicator: {indicator}), {len(problems) - 1} affected"]
     for name, state in problems:
         lines.append(f"  - {name}: {state}")
     return "\n".join(lines)

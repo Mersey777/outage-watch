@@ -38,6 +38,10 @@ class SummarizeTests(unittest.TestCase):
         report = status_check.format_report(*status_check.summarize(load("outage.json")))
         self.assertIn("Git Operations: major_outage", report)
 
+    def test_tc07_report_counts_affected_components(self):
+        report = status_check.format_report(*status_check.summarize(load("outage.json")))
+        self.assertIn("2 affected", report.splitlines()[0])
+
 
 class FetchTests(unittest.TestCase):
     @mock.patch("status_check.requests.get", side_effect=requests.Timeout)
