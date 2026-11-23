@@ -1,7 +1,7 @@
 ## Story
 Closes #__ <!-- when this PR finishes the story -->
-Part of #__ <!-- when the story needs more PRs; delete the line you don't use.
-Use the GitHub issue number, not the OW id: OW-1 to OW-21 are #1 to #21, OW-22 is #23 -->
+Part of #__ <!-- when the story needs more PRs -->
+<!-- Delete the line you don't use. Use the GitHub issue number, not the OW id: OW-1 to OW-21 are #1 to #21, OW-22 is #23 -->
 
 ## What changed
 <!-- 1 to 3 bullets: what a reviewer will see in the diff. -->
